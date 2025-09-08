@@ -1,0 +1,73 @@
+@use "../colors.scss" as *;
+
+.my-choices {
+  width: 100%;
+  max-width: 30%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  background-color: $background;
+  &__title {
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #ccc;
+  }
+  &__list {
+    position: relative;
+  }
+  &__remove {
+    width: 2rem;
+    height: 2rem;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: $cancel;
+    color: $paragraph-light;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.3s ease;
+    &:hover {
+      background-color: $paragraph-light;
+      color: $cancel;
+      transition: 0.3s ease;
+    }
+  }
+  &__item,
+  &__amount {
+    margin-bottom: 1rem;
+    p {
+      color: $paragraph;
+    }
+  }
+  &__buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+  &__button {
+    background-color: #57e5ca;
+    color: #1e1d62;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    &:hover {
+      background-color: #1e1d62;
+      color: #57e5ca;
+    }
+    &.submit {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+@use "../colors.scss" as *;
+
+.my-bets {
+  width: 100%;
+  &__header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  &__show-more {
+    font-size: 0.8rem;
+    color: $secondary;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__list {
+    width: 100%;
+    display: none;
+    &.expanded {
+      display: block;
+    }
+  }
+  &__table-headers {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: $secondary;
+    color: $background-light;
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-align: center;
+    align-items: center;
+  }
+  &__table-row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: $background-light;
+    color: $paragraph;
+    font-size: 0.7rem;
+    text-align: center;
+    align-items: center;
+    border-bottom: 1px solid $background;
+    padding: 5px 0;
+    &:nth-child(even) {
+      background-color: $background;
+    }
+  }
+  &__footer {
+    display: none;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    &.expanded {
+      display: flex;
+    }
+  }
+  &__footer-data {
+    font-weight: bold;
+    color: $secondary;
+  }
+}
